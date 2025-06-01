@@ -209,5 +209,8 @@ async function fazerLogout() {
     localStorage.removeItem('usuarioLogado');
     location.reload();
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
 }

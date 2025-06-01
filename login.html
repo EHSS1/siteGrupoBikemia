@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -48,4 +49,56 @@
     </script>
     <script src="src/js/script.js" type="module" defer></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Grupo Bikemia</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="src/images/logo_bikemia_fogo_transparente.png" alt="Logo Bikemia">
+        </div>
+        <nav aria-label="Navegação principal">
+            <ul id="menu-principal">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="#" data-modal="loginModal">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="formulario">
+            <h1>Login</h1>
+            <form id="loginForm" data-api="login.php" autocomplete="on">
+                <input type="text" id="loginUsuario" name="usuario" placeholder="Usuário ou e-mail" required autocomplete="username">
+                <input type="password" id="loginSenha" name="senha" placeholder="Senha" required autocomplete="current-password">
+                <button type="submit">Entrar</button>
+                <p>Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="redes-sociais">
+                <h3>Siga-nos</h3>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; <span id="currentYear"></span> Grupo Bikemia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <script src="src/js/script.js" type="module" defer></script>
+</body>
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
 </html>

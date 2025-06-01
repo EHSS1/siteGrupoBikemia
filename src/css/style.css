@@ -30,6 +30,10 @@ body {
   color: var(--text-color);
   background: var(--body-bg);
   line-height: 1.6;
+<<<<<<< HEAD
+=======
+  /*padding-top: var(--header-height);*/
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
 }
 
 body.modal-open {
@@ -114,7 +118,11 @@ nav ul li a.active {
   color: var(--primary-color);
 }
 
+<<<<<<< HEAD
 nav ul li a.menu-link::after {
+=======
+nav ul li a::after {
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
   content: '';
   position: absolute;
   bottom: 0;
@@ -133,7 +141,11 @@ nav ul li a.active::after {
 
 /* Links para login/cadastro */
 nav ul li a.link-azul {
+<<<<<<< HEAD
   color: var(--secondary-hover) !important;
+=======
+  color: var(--primary-color) !important;
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
   text-decoration: none !important;
   font-weight: 600;
   background: none !important;
@@ -147,7 +159,11 @@ nav ul li a.link-azul {
 nav ul li a.link-azul:hover,
 nav ul li a.link-azul:focus {
   color: var(--light-color) !important;
+<<<<<<< HEAD
   background: var(--primary-hover) !important;
+=======
+  background: var(--primary-color) !important;
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
   text-decoration: none !important;
   transform: translateY(-2px);
   box-shadow: var(--box-shadow);
@@ -300,6 +316,7 @@ footer {
 }
 
 .redes-sociais a {
+<<<<<<< HEAD
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -327,6 +344,19 @@ footer {
   box-shadow: none;
 }
 
+=======
+  color: var(--light-color);
+  margin: 0 22.5px;
+  font-size: 42px;
+  transition: var(--transition);
+}
+
+.redes-sociais a:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
 /* Modais */
 .modal {
   display: none;
@@ -351,10 +381,17 @@ footer {
 
 .modal-content {
   background: var(--light-color);
+<<<<<<< HEAD
   padding: 25px;
   border-radius: var(--border-radius);
   width: 90%;
   max-width: 400px;
+=======
+  padding: 52.5px;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 750px;
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
   position: relative;
   text-align: center;
   box-shadow: var(--box-shadow);
@@ -362,6 +399,7 @@ footer {
 
 .modal-content h2 {
   color: var(--primary-color);
+<<<<<<< HEAD
   margin-bottom: 2px;
   font-size: 24px;
 }
@@ -370,6 +408,15 @@ footer {
   font-size: 16px;
   color: var(--text-color);
   margin-bottom: 10px;
+=======
+  margin-bottom: 30px;
+}
+
+.modal-content p {
+  font-size: 27px;
+  color: var(--text-color);
+  margin-bottom: 30px;
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
 }
 
 .modal-content .botao {
@@ -397,7 +444,11 @@ footer {
 .modal-content form {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   gap: 5px;
+=======
+  gap: 22.5px;
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
 }
 
 .modal-content label {
@@ -407,10 +458,17 @@ footer {
 }
 
 .modal-content input {
+<<<<<<< HEAD
   padding: 12px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: var(--border-radius);
   font-size: 16px;
+=======
+  padding: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  font-size: 21px;
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
   transition: var(--transition);
 }
 
@@ -424,7 +482,11 @@ footer {
   margin-top: 30px;
   background-color: var(--primary-color);
   color: var(--light-color);
+<<<<<<< HEAD
   padding: 12px 18px;
+=======
+  padding: 18px;
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
   font-weight: bold;
   border: none;
   border-radius: var(--border-radius);
@@ -563,7 +625,11 @@ footer {
     height: 210px;
     max-width: 100%;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
   .banner {
     min-height: 210px;
     padding: 15px 0;
@@ -596,6 +662,7 @@ footer {
   .logo img {
     max-width: 90px;
   }
+<<<<<<< HEAD
 }
 
 /* ========================================= */
@@ -781,4 +848,6 @@ footer {
      .avaliacao-card h2 {
         font-size: 20px;
     }
+=======
+>>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
 }

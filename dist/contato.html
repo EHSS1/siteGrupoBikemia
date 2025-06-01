@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre o Bikemia</title>
-  <meta name="description" content="Conheça a história do Grupo Bikemia, nossa missão, valores e paixão pelo ciclismo MTB e trilhas." />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Grupo Bikemia</title>
+  <meta name="description" content="Entre em contato com o Grupo Bikemia. Tire dúvidas, envie sugestões ou participe das trilhas MTB.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <meta name="csrf-token" content="<?php session_start(); echo $_SESSION['csrf_token'] ?? ''; ?>">
-<<<<<<< HEAD
-  <link rel="stylesheet" href="src/css/style.css">
-=======
-  <script type="module" crossorigin src="/assets/script-XNhK3HXT.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/style-uri7tF9p.css">
->>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
+  <script type="module" crossorigin src="/assets/style-uri7tF9p-B_2mDeed.js"></script>
+  <script type="module" crossorigin src="/assets/script-XNhK3HXT-D2hTLj7x.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-uri7tF9p.css">
 </head>
 <body>
   <header>
     <div class="logo">
-<<<<<<< HEAD
-      <img src="src/images/logo_bikemia_fogo_transparente.png" alt="Logo Bikemia" />
-=======
       <img src="/assets/logo_bikemia_fogo_transparente-Mn686JhB.png" alt="Logo Bikemia" />
->>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
     </div>
     <nav aria-label="Navegação principal">
       
       <ul id="menu-principal">
         <li><a href="index.html">Início</a></li>
-        <li><a href="bikemia.html" class="active">Bikemia</a></li>
+        <li><a href="bikemia.html">Bikemia</a></li>
         <li><a href="trilhas.html">Trilhas</a></li>
         <li><a href="eventos.html">Eventos</a></li>
         <li><a href="galeria.html">Galeria</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="parcerias.html">Parcerias</a></li>
-        <li><a href="contato.html">Contato</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
         <li><a href="#" class="link-azul" data-modal="cadastroModal">Cadastre-se</a></li>
         <li><a href="#" class="link-azul" data-modal="loginModal">Login</a></li>
       </ul>
@@ -42,29 +35,32 @@
   </header>
   <main>
     <section class="banner">
-<<<<<<< HEAD
-      <img src="src/images/grupoBikemia.jpg" alt="Grupo Bikemia pedalando" />
-=======
-      <img src="/assets/sobre-xH5l4qaD.jpg" alt="Grupo Bikemia pedalando" />
->>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
+      <img src="/assets/sobre-xH5l4qaD-xH5l4qaD.jpg" alt="Grupo Bikemia pedalando" />
       <div class="destaque-texto">
-        <h1>Como nasceu o grupo Bikemia</h1>
-        <p>Fundado em 04 de agosto de 2021, por Victor, Thais, Deyse, Tatiana, Patrícia, Henrique, Luis e Lira.</p>
+        <h1>Fale Conosco</h1>
+        <p>Estamos aqui para ajudar você!</p>
+        <p>Se você tem alguma dúvida, sugestão ou gostaria de saber mais sobre o Grupo Bikemia, entre em contato conosco.</p>        
+        <p>Entre em contato ou envie sua dúvida</p>
       </div>
+      
     </section>
-    <section class="sobre">
-      <h2>Sobre o Bikemia</h2>
-      <div class="sobre-conteudo">
-        <p>
-          O Bikemia é um grupo de ciclistas apaixonados por natureza, saúde e aventura. Nosso objetivo é conectar pessoas através de trilhas emocionantes e promover um estilo de vida saudável e sustentável.
-        </p>
-        <p>
-          Fundado em 2021, o Bikemia já realizou e realiza muitas trilhas e conta com uma comunidade ativa de ciclistas de todos os níveis.
-        </p>
-        <p>
-          Acreditamos no respeito ao meio ambiente e na importância de cuidar das trilhas que percorremos. Junte-se a nós e faça parte dessa comunidade!
-        </p>
-      </div>
+    <section class="destaques">
+      <h2>Contato</h2>
+      <!-- Adicione formulário de contato ou informações extras aqui -->
+      <form id="contatoForm" data-api="contato.php">
+        <label for="contatoNome">Nome</label>
+        <input type="text" id="contatoNome" name="nome" required />
+
+        <label for="contatoEmail">E-mail</label>
+        <input type="email" id="contatoEmail" name="email" required />
+
+        <label for="contatoMensagem">Mensagem</label>
+        <textarea id="contatoMensagem" name="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar Mensagem</button>
+        <div id="contatoMessage" class="message error-message" style="display:none;"></div>
+
+        </form>
     </section>
   </main>
 
@@ -133,42 +129,16 @@
   <footer>
     <div class="footer-content">
       <div class="redes-sociais">
-<<<<<<< HEAD
-        <h3>Siga-nos</h3>
-  
-  <!-- Strava -->
-  <a href="https://www.strava.com/clubs/seu-clube" target="_blank" rel="noopener" aria-label="Strava">
-  <img src="src/images/icons8-strava.svg" alt="Strava" width="40" height="40" style="vertical-align:middle;" />
-  </a>
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/grupobikemia?igsh=MWpiZG2YTlyb2lzYQ==" target="_blank" rel="noopener" aria-label="Instagram">
-    <img src="src/images/icons8-instagram.svg" alt="Instagram" width="40" height="40" style="vertical-align:middle;" />
-  </a>
-  <!-- YouTube -->
-  <a href="https://www.youtube.com/watch?v=0pWkWvjCNvo" target="_blank" rel="noopener" aria-label="YouTube">
-    <img src="src/images/icons8-youtube.svg" alt="YouTube" width="40" height="40" style="vertical-align:middle;" />
-  </a>
-=======
-        <img src="/assets/logo_bikemia_fogo_transparente-Mn686JhB.png" alt="Bikemia Logo" class="footer-logo">
-        <p>O Bikemia é um grupo de ciclismo dedicado a promover o mountain bike, mapeando trilhas, organizando eventos e compartilhando momentos inesquecíveis sobre duas rodas.</p>
-                    <div class="social-media">
         <h3>Siga-nos</h3>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
         <a href="#"><i class="fab fa-whatsapp"></i></a>
->>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
       </div>
       <p>&copy; <span id="currentYear"></span> Grupo Bikemia. Todos os direitos reservados.</p>
     </div>
   </footer>
-<<<<<<< HEAD
 
-  <script src="src/js/script.js" type="module" defer></script>
-=======
-  
-
->>>>>>> 6d37e4fd788793a9363fb7b2a757157aa16097dd
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
