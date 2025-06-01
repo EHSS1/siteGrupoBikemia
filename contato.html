@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Grupo Bikemia</title>
+  <meta name="description" content="Entre em contato com o Grupo Bikemia. Tire dúvidas, envie sugestões ou participe das trilhas MTB.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta name="csrf-token" content="<?php session_start(); echo $_SESSION['csrf_token'] ?? ''; ?>">
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="src/images/logo_bikemia_fogo_transparente.png" alt="Logo Bikemia" />
+    </div>
+    <nav aria-label="Navegação principal">
+      
+      <ul id="menu-principal">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="bikemia.html">Bikemia</a></li>
+        <li><a href="trilhas.html">Trilhas</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="parcerias.html">Parcerias</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+        <li><a href="#" class="link-azul" data-modal="cadastroModal">Cadastre-se</a></li>
+        <li><a href="#" class="link-azul" data-modal="loginModal">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="banner">
+      <img src="src/images/sobre.jpg" alt="Grupo Bikemia pedalando" />
+      <div class="destaque-texto">
+        <h1>Fale Conosco</h1>
+        <p>Estamos aqui para ajudar você!</p>
+        <p>Se você tem alguma dúvida, sugestão ou gostaria de saber mais sobre o Grupo Bikemia, entre em contato conosco.</p>        
+        <p>Entre em contato ou envie sua dúvida</p>
+      </div>
+      
+    </section>
+    <section class="destaques">
+      <h2>Contato</h2>
+      <!-- Adicione formulário de contato ou informações extras aqui -->
+      <form id="contatoForm" data-api="contato.php">
+        <label for="contatoNome">Nome</label>
+        <input type="text" id="contatoNome" name="nome" required />
+
+        <label for="contatoEmail">E-mail</label>
+        <input type="email" id="contatoEmail" name="email" required />
+
+        <label for="contatoMensagem">Mensagem</label>
+        <textarea id="contatoMensagem" name="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar Mensagem</button>
+        <div id="contatoMessage" class="message error-message" style="display:none;"></div>
+
+        </form>
+    </section>
+  </main>
+
+  <!-- MODAL LOGIN -->
+  <div id="loginModal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="close" aria-label="Fechar modal">&times;</button>
+      <h2>Login</h2>
+      <div id="loginMessage" class="message error-message" style="display:none;"></div>
+      <form id="loginForm" data-api="login.php" autocomplete="on">
+    <label for="loginUsuario">Usuário ou E-mail</label>
+    <input type="text" id="loginUsuario" name="usuario" placeholder="Seu e-mail ou apelido" required autocomplete="username">
+
+    <label for="loginSenha">Senha</label>
+    <input type="password" id="loginSenha" name="senha" placeholder="Sua senha" required autocomplete="current-password">
+
+    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token'] ?? ''; ?>">
+    <button type="submit">Entrar</button>
+    <p class="form-footer">Não tem conta? <a href="#" data-modal="cadastroModal">Cadastre-se</a></p>
+</form>
+    </div>
+  </div>
+
+  <!-- MODAL DE BOAS-VINDAS -->
+  <div id="bemVindoModal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="close" aria-label="Fechar modal" onclick="fecharModal('bemVindoModal')">&times;</button>
+      <h2 style="color: var(--primary-color)">Bem-vindo ao Grupo Bikemia!</h2>
+      <p id="usuarioLogadoTexto">Login efetuado com sucesso!</p>
+      <a href="index.html" class="botao">Voltar à Página Inicial</a>
+    </div>
+  </div>
+
+  <!-- MODAL CADASTRO -->
+  <div id="cadastroModal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="close" aria-label="Fechar modal">&times;</button>
+      <h2>Cadastro</h2>
+      <div id="cadastroMessage" class="message error-message" style="display:none;"></div>
+      <form id="cadastroForm" data-api="cadastro.php" autocomplete="on">
+    <label for="cadastroNome">Nome Completo</label>
+    <input type="text" id="cadastroNome" name="nome" placeholder="Seu nome completo" required autocomplete="name">
+
+    <label for="cadastroApelido">Apelido</label>
+    <input type="text" id="cadastroApelido" name="apelido" placeholder="Como quer ser chamado" required autocomplete="nickname">
+
+    <label for="cadastroEmail">E-mail</label>
+    <input type="email" id="cadastroEmail" name="email" placeholder="Seu melhor e-mail" required autocomplete="email">
+
+    <label for="cadastroTelefone">Telefone</label>
+    <input type="tel" id="cadastroTelefone" name="telefone" placeholder="(XX) XXXXX-XXXX" autocomplete="tel">
+
+    <label for="cadastroSenha">Senha</label>
+    <input type="password" id="cadastroSenha" name="senha" placeholder="Mínimo 8 caracteres" required minlength="8" autocomplete="new-password">
+
+    <label for="cadastroConfirmar">Confirmar Senha</label>
+    <input type="password" id="cadastroConfirmar" name="confirmar_senha" placeholder="Digite a senha novamente" required minlength="8" autocomplete="new-password">
+
+    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token'] ?? ''; ?>">
+    <button type="submit">Cadastrar</button>
+    <p class="form-footer">Já tem conta? <a href="#" data-modal="loginModal">Entrar</a></p>
+</form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="redes-sociais">
+        <h3>Siga-nos</h3>
+  
+  <!-- Strava -->
+  <a href="https://www.strava.com/clubs/seu-clube" target="_blank" rel="noopener" aria-label="Strava">
+  <img src="src/images/icons8-strava.svg" alt="Strava" width="40" height="40" style="vertical-align:middle;" />
+  </a>
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/grupobikemia?igsh=MWpiZG2YTlyb2lzYQ==" target="_blank" rel="noopener" aria-label="Instagram">
+    <img src="src/images/icons8-instagram.svg" alt="Instagram" width="40" height="40" style="vertical-align:middle;" />
+  </a>
+  <!-- YouTube -->
+  <a href="https://www.youtube.com/watch?v=0pWkWvjCNvo" target="_blank" rel="noopener" aria-label="YouTube">
+    <img src="src/images/icons8-youtube.svg" alt="YouTube" width="40" height="40" style="vertical-align:middle;" />
+  </a>
+      </div>
+      <p>&copy; <span id="currentYear"></span> Grupo Bikemia. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="src/js/script.js" type="module" defer></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
