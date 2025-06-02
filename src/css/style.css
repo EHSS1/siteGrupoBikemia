@@ -26,10 +26,13 @@
 }
 
 body {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   color: var(--text-color);
   background: var(--body-bg);
   line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 
 body.modal-open {
@@ -188,14 +191,14 @@ nav ul li a.link-azul:focus {
 }
 
 .banner h1 {
-  font-size: 72px;
+  font-size: 36px;
   margin-bottom: 30px;
   color: var(--light-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .banner p {
-  font-size: 36px;
+  font-size: 24px;
   margin-bottom: 45px;
   color: var(--light-color);
 }
@@ -552,7 +555,7 @@ footer {
   }
 
   .banner h1 {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   .banner p {
@@ -597,187 +600,44 @@ footer {
   }
 }
 
-/* ========================================= */
-/* Seção de Avaliação do Site (Revisado)  */
-/* ========================================= */
-
-#avaliacao-site {
-    padding: 60px 15px; /* Espaçamento vertical e um pouco nas laterais para telas pequenas */
-    background-color: var(--body-bg); /* Usa o fundo cinza claro do seu body */
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5em;
+  line-height: 1.1;
 }
 
-.avaliacao-card {
-    background-color: var(--light-color); /* Fundo branco para o card, conforme sua variável */
-    padding: 35px 40px; /* Padding interno (vertical, horizontal) */
-    border-radius: var(--border-radius); /* Seu raio de borda padrão */
-    box-shadow: var(--box-shadow); /* Sua sombra padrão */
-    max-width: 680px; /* Largura máxima do card, ajuste se necessário */
-    margin: 0 auto; /* Centraliza o card na página */
-    text-align: center; /* Centraliza o texto do h2 e p */
+h1 { font-size: 2.7rem; }
+h2 { font-size: 2.1rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1.05rem; }
+h6 { font-size: 1rem; }
+
+p, li, label, input, button, a, span {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  color: inherit;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 
-.avaliacao-card h2 {
-    font-size: 26px; /* Tamanho do título, ajuste conforme a imagem */
-    color: var(--text-color); /* Sua cor de texto padrão */
-    text-transform: uppercase;
-    font-weight: 700; /* Fonte mais forte */
-    margin-bottom: 8px;
+button, .botao, a.button, input[type="submit"] {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-.avaliacao-card > p { /* Parágrafo descritivo */
-    font-size: 15px; /* Tamanho do parágrafo, ajuste conforme a imagem */
-    color: var(--text-light); /* Sua cor de texto clara */
-    margin-bottom: 35px;
-    line-height: 1.6;
-}
-
-#form-avaliacao .form-group {
-    margin-bottom: 28px; /* Espaço entre os grupos de formulário */
-    text-align: left; /* Alinha os labels à esquerda */
-}
-
-#form-avaliacao .form-group label {
-    display: block;
-    font-weight: 600; /* Peso da fonte para labels */
-    color: var(--text-color);
-    margin-bottom: 12px; /* Espaço abaixo do label */
-    font-size: 15px; /* Tamanho da fonte do label */
-}
-
-/* Estilização das Estrelas Interativas */
-.estrelas-avaliacao {
-    display: flex;
-    flex-direction: row-reverse; /* Importante para o efeito de hover com CSS */
-    justify-content: center; /* Centraliza as estrelas no container */
-    gap: 4px; /* Espaço pequeno entre as estrelas */
-}
-
-.estrelas-avaliacao input[type="radio"] {
-    display: none; /* Esconde os inputs de rádio reais */
-}
-
-.estrelas-avaliacao label { /* Estilo para cada estrela (label) */
-    font-size: 32px; /* Tamanho das estrelas (caractere Unicode) */
-    color: #e0e0e0; /* Cor padrão para estrelas inativas (cinza claro) */
-    cursor: pointer;
-    transition: color 0.2s ease-in-out;
-    padding: 0 2px; /* Pequeno padding lateral para melhor clique */
-    margin-bottom: 0; /* Remove margem padrão de label se houver */
-}
-
-/* Quando um input está selecionado (checked), todas as estrelas "anteriores" (no DOM, que são as da direita devido ao row-reverse) ficam coloridas */
-.estrelas-avaliacao input[type="radio"]:checked ~ label {
-    color: var(--primary-color); /* Sua cor primária laranja */
-}
-
-/* Efeito de hover: Pinta as estrelas da direita até a que está sob o mouse */
-.estrelas-avaliacao label:hover,
-.estrelas-avaliacao label:hover ~ label {
-    color: var(--primary-color); /* Sua cor primária laranja */
-}
-
-/* Mantém a cor das selecionadas mesmo durante o hover em outras estrelas */
-.estrelas-avaliacao:hover input[type="radio"]:checked ~ label {
-    color: var(--primary-color);
-}
-
-
-#form-avaliacao textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #d1d1d1; /* Borda um pouco mais visível */
-    border-radius: var(--border-radius);
-    font-size: 15px;
-    font-family: inherit;
-    transition: var(--transition);
-    background-color: var(--light-color);
-    min-height: 110px;
-    resize: vertical;
-}
-
-#form-avaliacao textarea::placeholder {
-    color: #a0a0a0; /* Cor do placeholder, um cinza médio */
-}
-
-#form-avaliacao textarea:focus {
-    border-color: var(--primary-color); /* Sua cor primária no foco */
-    box-shadow: 0 0 0 3px rgba(255, 133, 51, 0.2); /* Sombra com sua cor primária e opacidade */
-    outline: none;
-}
-
-#form-avaliacao button[type="submit"] {
-    background-color: var(--primary-color); /* Sua cor primária */
-    color: var(--light-color); /* Seu texto claro */
-    padding: 14px 28px; /* Padding do botão */
-    margin-top: 5px; /* Espaço acima do botão */
-    border-radius: var(--border-radius);
-    transition: var(--transition);
-    display: inline-block; /* Para permitir centralização com text-align no pai se necessário, ou use margin auto */
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 15px;
-    text-transform: uppercase;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
-}
-
-#form-avaliacao button[type="submit"]:hover {
-    background-color: var(--primary-hover); /* Sua cor primária de hover */
-    transform: translateY(-2px); /* Efeito de elevação */
-    box-shadow: var(--box-shadow); /* Sua sombra padrão mais forte no hover */
-}
-
-#mensagem-avaliacao {
-    margin-top: 25px;
-    font-weight: 500;
-    font-size: 15px;
-    min-height: 22px;
-    padding: 10px 15px;
-    border-radius: var(--border-radius);
-    display: none; /* Começa escondida, mostrada via JS */
-}
-
-#mensagem-avaliacao.success {
-    background-color: rgba(46, 204, 113, 0.08); /* Usa sua --success-color com opacidade */
-    color: var(--success-color);
-    border: 1px solid rgba(46, 204, 113, 0.3);
-    display: block; /* Mostra a mensagem */
-}
-
-#mensagem-avaliacao.error {
-    background-color: rgba(231, 76, 60, 0.08); /* Usa sua --error-color com opacidade */
-    color: var(--error-color);
-    border: 1px solid rgba(231, 76, 60, 0.3);
-    display: block; /* Mostra a mensagem */
-}
-
-
-/* Ajustes de Responsividade Opcionais (adicionar dentro das suas media queries existentes ou criar novas) */
-@media (max-width: 768px) {
-    .avaliacao-card {
-        padding: 30px 25px;
-    }
-    .avaliacao-card h2 {
-        font-size: 22px;
-    }
-    .avaliacao-card > p {
-        font-size: 14px;
-        margin-bottom: 25px;
-    }
-    .estrelas-avaliacao label {
-        font-size: 28px; /* Estrelas um pouco menores em telas menores */
-    }
-    #form-avaliacao button[type="submit"] {
-        padding: 12px 24px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .avaliacao-card {
-        padding: 25px 20px;
-    }
-     .avaliacao-card h2 {
-        font-size: 20px;
-    }
+nav ul li a {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
