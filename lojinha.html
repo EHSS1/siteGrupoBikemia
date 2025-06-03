@@ -3,77 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Grupo Bikemia - Conectando pessoas, trilhas e natureza" />
-  <title>Grupo Bikemia</title>
+  <meta name="description" content="Lojinha Bikemia - Produtos oficiais do Grupo Bikemia" />
+  <title>Lojinha Bikemia</title>
   <link rel="stylesheet" href="src/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="src/images/favicon.ico" type="image/x-icon" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 </head>
 <body>
   <header>
-    
     <div class="logo">
-      <img src="src/images/logo_bikemia_fogo_transparente.png" alt="Logo Bikemia" />
+      <img src="src/images/logo_bikemia_fogo_transparente.png" alt="Logo Bikemia">
     </div>
     <nav aria-label="Navegação principal">
-      
       <ul id="menu-principal">
-        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="index.html">Início</a></li>
         <li><a href="bikemia.html">Bikemia</a></li>
         <li><a href="trilhas.html">Trilhas</a></li>
         <li><a href="eventos.html">Eventos</a></li>
         <li><a href="galeria.html">Galeria</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="parcerias.html">Parcerias</a></li>
-        <li><a href="lojinha.html">Lojinha</a></li>
+       <li><a href="lojinha.html" class="active">Lojinha</a></li>
         <li><a href="#" class="link-azul" data-modal="cadastroModal">Cadastre-se</a></li>
         <li><a href="#" class="link-azul" data-modal="loginModal">Login</a></li>
       </ul>
     </nav>
   </header>
-
   <main>
     <section class="banner">
-      <img src="src/images/grupoBikemia.jpg" alt="Grupo Bikemia pedalando" />
+      <img src="src/images/sobre.jpg" alt="Grupo Bikemia pedalando">
       <div class="destaque-texto">
-        <h1>Bikemia + Saúde e Energia</h1>
-        <p>Conectando pessoas, trilhas e natureza.</p>
-        <div class="botoes">
-          <a href="trilhas.html" class="botao">Participe das Trilhas</a>
-          <a href="parcerias.html" class="botao">Conheça Nossos Parceiros</a>
-          <a href="galeria.html" class="botao">Veja Nossa Galeria</a>
-        </div>
+        <h1>Lojinha Bikemia</h1>
+        <p>Produtos oficiais para você pedalar com estilo!</p>
       </div>
     </section>
-    <section class="destaques">
-      <h1>Próximas Trilhas</h1>
-      <div class="trilhas-lista">
-        <div class="trilha">
-          <i class="fas fa-map-marker-alt"></i>
-          <h3>Trilha Comunidade Palmeira</h3>
-          <p>Data: 07/03/2025 | Dificuldade: Médio/Difícil | Local de Saída: UPA Sobradinho</p>
-        </div>
-        <!-- Adicione mais trilhas aqui -->
-      </div>
-      <h1>Eventos Recentes</h1>
-      <div class="eventos-lista">
-        <div class="evento">
-          <i class="fas fa-calendar-alt"></i>
-          <h3>Trilha do Brejinho</h3>
-          <p>Data: 22/02/2025 | Dificuldade: Médio | Local de Saída: Balão do Grande Colorado</p>
-        </div>
-        <div class="evento">
-          <i class="fas fa-calendar-alt"></i>
-          <h3>Trilha dos Cachorros</h3>
-          <p>Data: 18/02/2025 | Dificuldade: Médio | Local de Saída: Balão do Grande Colorado</p>
-        </div>
-      </div>
-    </section>
-  </main>
 
+    <!-- Seção de produtos dinâmica, preenchida pelo JS -->
+    <section class="produtos"></section>
+
+    <!-- No seu lojinha.html, dentro da seção do carrinho -->
+<section id="carrinho" class="carrinho">
+  <h2>Carrinho de Compras</h2>
+  <ul id="lista-carrinho"></ul>
+  <p id="total-carrinho">Total: R$ 0,00</p>
+  <button id="limpar-carrinho" type="button">Limpar Carrinho</button>
+  <button id="finalizar-compra" disabled>Finalizar Compra</button>
+</section>
+  </main>
   <!-- MODAL LOGIN -->
 <div id="loginModal" class="modal" aria-hidden="true" role="dialog">
   <div class="modal-content">
@@ -132,40 +109,39 @@
     </form>
   </div>
 </div>
-  
-  <footer>
- <div class="footer-content">
-  <div class="redes-sociais">
-    <h1>Siga-nos</h1>
-    <a href="https://www.strava.com/clubs/seu-clube" target="_blank" rel="noopener" aria-label="Strava">
-      <img src="src/images/icons8-strava.svg" alt="Strava" width="40" height="40" style="vertical-align:middle;" />
-    </a>
-    <a href="https://www.instagram.com/grupobikemia?igsh=MWpiZG2YTlyb2lzYQ==" target="_blank" rel="noopener" aria-label="Instagram">
-      <img src="src/images/icons8-instagram.svg" alt="Instagram" width="40" height="40" style="vertical-align:middle;" />
-    </a>
-    <a href="https://www.youtube.com/watch?v=0pWkWvjCNvo" target="_blank" rel="noopener" aria-label="YouTube">
-      <img src="src/images/icons8-youtube.svg" alt="YouTube" width="40" height="40" style="vertical-align:middle;" />
-    </a>
+<<!-- Modal de Sucesso da Compra -->
+<div id="compraSucessoModal" class="modal" aria-hidden="true" role="dialog">
+  <div class="modal-content">
+    <button class="close" aria-label="Fechar modal">&times;</button>
+    <h2 style="color: var(--primary-color)">Pedido realizado com sucesso!</h2>
+    <p style="margin-top:16px;">Obrigado por comprar na Lojinha Bikemia! Seu pedido foi recebido e está sendo processado.</p>
+    <p>Você receberá um e-mail com os detalhes da sua compra em breve.<br>
+    Em caso de dúvidas, entre em contato com nosso suporte.</p>
+    <button class="botao" onclick="fecharModal('compraSucessoModal')" style="margin-top:20px;">Fechar</button>
   </div>
-  <form id="contatoFooterForm" class="footer-contato-form">
-    <h2>Contato</h2>
-    <input type="text" name="nome" placeholder="Seu nome" required>
-    <input type="email" name="email" placeholder="Seu e-mail" required>
-    <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-    <button type="submit">Enviar</button>
-    <div id="contatoFooterMsg"></div>
-  </form>
-  <p>&copy; <span id="currentYear"></span> Grupo Bikemia. Todos os direitos reservados.</p>
 </div>
 
-<script>
-document.getElementById('contatoFooterForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  document.getElementById('contatoFooterMsg').textContent = "Mensagem enviada! Obrigado pelo contato.";
-  this.reset();
-});
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-</script>
-<script src="src/js/script.js" type="module" defer></script>
+  <footer>
+    <div class="footer-content">
+      <div class="redes-sociais">
+        <h1>Siga-nos</h1>
+        <a href="https://www.strava.com/clubs/seu-clube" target="_blank" rel="noopener" aria-label="Strava">
+          <img src="src/images/icons8-strava.svg" alt="Strava" width="40" height="40" style="vertical-align:middle;" />
+        </a>
+        <a href="https://www.instagram.com/grupobikemia?igsh=MWpiZG2YTlyb2lzYQ==" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="src/images/icons8-instagram.svg" alt="Instagram" width="40" height="40" style="vertical-align:middle;" />
+        </a>
+        <a href="https://www.youtube.com/watch?v=0pWkWvjCNvo" target="_blank" rel="noopener" aria-label="YouTube">
+          <img src="src/images/icons8-youtube.svg" alt="YouTube" width="40" height="40" style="vertical-align:middle;" />
+        </a>
+      </div>
+      <p>&copy; <span id="currentYear"></span> Grupo Bikemia. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+    <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+  <script src="src/js/lojinha.js" type="module" defer></script>
+  <script src="src/js/script.js" defer></script>
 </body>
 </html>

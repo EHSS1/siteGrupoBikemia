@@ -100,7 +100,7 @@ function initForms() {
 
         if (json.success) {
           // Armazena o token e dados do usuário no localStorage
-          localStorage.setItem('sessao_token', json.token);
+          localStorage.setItem('token', json.token);
           localStorage.setItem('usuarioLogado', JSON.stringify(json.usuario));
 
           fecharModal('loginModal');
@@ -146,12 +146,12 @@ function atualizarUIUsuario(usuario = null) {
   // Cria a saudação e botão de logout para usuário logado
   const nomeExibicao = user?.apelido && user.apelido.trim() !== "" ? user.apelido : user.nome;
 
-const li = document.createElement('li');
-li.innerHTML = `
-  <span class="usuario-logado">Olá, <strong>${nomeExibicao}</strong>!</span>
-  <a href="#" class="botao destaque" id="logoutBtn">Sair</a>
-`;
-nav.appendChild(li);
+  const li = document.createElement('li');
+  li.innerHTML = `
+    <span class="usuario-logado">Olá, <strong>${nomeExibicao}</strong>!</span>
+    <a href="#" class="botao destaque" id="logoutBtn">Sair</a>
+  `;
+  nav.appendChild(li);
 
   // Evento de logout
   document.getElementById('logoutBtn').addEventListener('click', async (e) => {
@@ -161,7 +161,7 @@ nav.appendChild(li);
 }
 
 async function verificarSessao() {
-  const token = localStorage.getItem('sessao_token');
+  const token = localStorage.getItem('token');
   if (!token) return;
 
   try {
@@ -177,19 +177,19 @@ async function verificarSessao() {
     if (json.success) {
       atualizarUIUsuario(json.usuario);
     } else {
-      localStorage.removeItem('sessao_token');
+      localStorage.removeItem('token');
       localStorage.removeItem('usuarioLogado');
       atualizarUIUsuario(); // Atualiza a UI para estado não logado
     }
   } catch (err) {
     console.error("Erro ao verificar sessão:", err);
-    localStorage.removeItem('sessao_token');
+    localStorage.removeItem('token');
     localStorage.removeItem('usuarioLogado');
   }
 }
 
 async function fazerLogout() {
-  const token = localStorage.getItem('sessao_token');
+  const token = localStorage.getItem('token');
   if (!token) {
     // Não tente fazer logout se não houver token
     localStorage.removeItem('usuarioLogado');
@@ -205,7 +205,7 @@ async function fazerLogout() {
   } catch (err) {
     console.error("Erro ao fazer logout:", err);
   } finally {
-    localStorage.removeItem('sessao_token');
+    localStorage.removeItem('token');
     localStorage.removeItem('usuarioLogado');
     location.reload();
   }

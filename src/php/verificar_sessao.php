@@ -6,7 +6,21 @@ require_once __DIR__ . '/core/security.php';
 header('Content-Type: application/json');
 
 $headers = getallheaders();
-$token = $headers['Authorization'] ?? '';
+if (isset($headers['Authorization'])) {
+    $token = $headers['Authorization'];
+} elseif (isset($_SERVER['HTTP_AUTHORIZATION'])) {
+    $token = $_SERVER['HTTP_AUTHORIZATION'];
+} elseif (function_exists('apache_request_headers')) {
+    $apacheHeaders = apache_request_headers();
+    $token = $apacheHeaders['Authorization'] ?? '';
+} else {
+    $token = '';
+}
+file_put_contents('log_token.txt', print_r([
+    'headers' => $headers,
+    'token' => $token,
+    '_SERVER' => $_SERVER
+], true));
 
 if (!$token) {
   echo json_encode(['success' => false, 'message' => 'Token não fornecido']);
