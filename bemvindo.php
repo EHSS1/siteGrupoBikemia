@@ -1,4 +1,4 @@
-<!-- C:\xampp\htdocs\GrupoBikemia_Final\bemvindo.php -->
+<!-- C:\xampp\htdocs\siteGrupoBikemia\bemvindo.php -->
 
 <?php
 session_start();

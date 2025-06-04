@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost/projectGrupoBikemia/src/php';
+const API_URL = 'http://localhost/siteGrupoBikemia/src/php';
 
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 

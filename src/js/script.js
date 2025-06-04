@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost/projectGrupoBikemia/src/php';
+const API_URL = 'http://localhost/siteGrupoBikemia/src/php';
 
 document.addEventListener('DOMContentLoaded', () => {
   initModais();
@@ -31,6 +31,15 @@ function abrirModal(id) {
   if (modal) {
     document.body.classList.add('modal-open');
     modal.classList.add('active');
+    // Limpa mensagem de login ao abrir normalmente
+    if (id === 'loginModal') {
+      const loginMsg = document.getElementById('loginMessage');
+      if (loginMsg) {
+        loginMsg.textContent = "";
+        loginMsg.style.display = "none";
+        loginMsg.className = "message";
+      }
+    }
   }
 }
 
@@ -65,11 +74,16 @@ function initForms() {
       
         const json = JSON.parse(text);
 
-        alert(json.message);
-
         if (json.success) {
           fecharModal('cadastroModal');
           abrirModal('loginModal');
+          // Mostra mensagem de sucesso na modal de login
+          const loginMsg = document.getElementById('loginMessage');
+          if (loginMsg) {
+            loginMsg.textContent = "Cadastro efetuado com sucesso! Faça o login para continuar.";
+            loginMsg.style.display = "block";
+            loginMsg.className = "message success-message";
+          }
         }
 
       } catch (err) {
@@ -96,20 +110,32 @@ function initForms() {
         });
 
         const json = await res.json();
-        alert(json.message);
 
         if (json.success) {
-          // Armazena o token e dados do usuário no localStorage
-          localStorage.setItem('token', json.token);
-          localStorage.setItem('usuarioLogado', JSON.stringify(json.usuario));
+  // Armazena o token e dados do usuário no localStorage
+  localStorage.setItem('token', json.token);
+  localStorage.setItem('usuarioLogado', JSON.stringify(json.usuario));
 
-          fecharModal('loginModal');
-          atualizarUIUsuario(json.usuario);
-          abrirModal('bemVindoModal');
-        }
+  fecharModal('loginModal');
+  atualizarUIUsuario(json.usuario);
+  abrirModal('bemVindoModal');
+} else {
+  // Mostra mensagem de erro padrão na modal de login
+  const loginMsg = document.getElementById('loginMessage');
+  if (loginMsg) {
+    loginMsg.textContent = "Usuário ou senha inválidos.";
+    loginMsg.style.display = "block";
+    loginMsg.className = "message error-message";
+  }
+}
       } catch (err) {
         console.error("Erro no login:", err);
-        alert("Erro inesperado ao fazer login");
+        const loginMsg = document.getElementById('loginMessage');
+        if (loginMsg) {
+          loginMsg.textContent = "Erro inesperado ao fazer login.";
+          loginMsg.style.display = "block";
+          loginMsg.className = "message error-message";
+        }
       }
     });
   }
@@ -210,3 +236,39 @@ async function fazerLogout() {
     location.reload();
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  // ...existing code...
+
+  // Formulário de contato do rodapé
+  const contatoForm = document.getElementById('contatoFooterForm');
+  if (contatoForm) {
+    contatoForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const msgDiv = document.getElementById('contatoFooterMsg');
+      msgDiv.textContent = "Enviando...";
+
+      const formData = new FormData(contatoForm);
+
+      try {
+        const res = await fetch('src/php/contato.php', {
+          method: 'POST',
+          body: formData
+        });
+        const json = await res.json();
+        if (json.success) {
+          msgDiv.textContent = "Mensagem enviada! Obrigado pelo contato.";
+          contatoForm.reset();
+        } else {
+          msgDiv.textContent = json.error || "Erro ao enviar mensagem.";
+        }
+      } catch (err) {
+        msgDiv.textContent = "Erro ao enviar mensagem.";
+      }
+    });
+  }
+
+  // Atualiza o ano no rodapé
+  const ano = document.getElementById('currentYear');
+  if (ano) ano.textContent = new Date().getFullYear();
+});

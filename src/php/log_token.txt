@@ -4,29 +4,26 @@ Array
         (
             [Host] => localhost
             [Connection] => keep-alive
-            [Content-Length] => 308
             [sec-ch-ua-platform] => "Windows"
-            [Authorization] => 60bdf110c198364cefbfe1afdc9c50cb319e8da82bf4c58ec33859d6fa65c36d
+            [Authorization] => 93ca6b9363eeba6666413531bffdbbf84ee58b9291cce7dfc94ba0bc54c4a0b4
             [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
             [sec-ch-ua] => "Chromium";v="136", "Google Chrome";v="136", "Not.A/Brand";v="99"
-            [Content-Type] => application/json
             [sec-ch-ua-mobile] => ?0
             [Accept] => */*
-            [Origin] => http://localhost
             [Sec-Fetch-Site] => same-origin
             [Sec-Fetch-Mode] => cors
             [Sec-Fetch-Dest] => empty
-            [Referer] => http://localhost/projectGrupoBikemia/lojinha.html
+            [Referer] => http://localhost/siteGrupoBikemia/index.html
             [Accept-Encoding] => gzip, deflate, br, zstd
             [Accept-Language] => pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
             [Cookie] => PHPSESSID=spv23vphp7815cchjmlpggsope
             [DNT] => 1
         )
 
-    [token] => 60bdf110c198364cefbfe1afdc9c50cb319e8da82bf4c58ec33859d6fa65c36d
+    [token] => 93ca6b9363eeba6666413531bffdbbf84ee58b9291cce7dfc94ba0bc54c4a0b4
     [_SERVER] => Array
         (
-            [HTTP_AUTHORIZATION] => 60bdf110c198364cefbfe1afdc9c50cb319e8da82bf4c58ec33859d6fa65c36d
+            [HTTP_AUTHORIZATION] => 93ca6b9363eeba6666413531bffdbbf84ee58b9291cce7dfc94ba0bc54c4a0b4
             [MIBDIRS] => C:/xampp/php/extras/mibs
             [MYSQL_HOME] => \xampp\mysql\bin
             [OPENSSL_CONF] => C:/xampp/apache/bin/openssl.cnf
@@ -35,18 +32,15 @@ Array
             [TMP] => \xampp\tmp
             [HTTP_HOST] => localhost
             [HTTP_CONNECTION] => keep-alive
-            [CONTENT_LENGTH] => 308
             [HTTP_SEC_CH_UA_PLATFORM] => "Windows"
             [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
             [HTTP_SEC_CH_UA] => "Chromium";v="136", "Google Chrome";v="136", "Not.A/Brand";v="99"
-            [CONTENT_TYPE] => application/json
             [HTTP_SEC_CH_UA_MOBILE] => ?0
             [HTTP_ACCEPT] => */*
-            [HTTP_ORIGIN] => http://localhost
             [HTTP_SEC_FETCH_SITE] => same-origin
             [HTTP_SEC_FETCH_MODE] => cors
             [HTTP_SEC_FETCH_DEST] => empty
-            [HTTP_REFERER] => http://localhost/projectGrupoBikemia/lojinha.html
+            [HTTP_REFERER] => http://localhost/siteGrupoBikemia/index.html
             [HTTP_ACCEPT_ENCODING] => gzip, deflate, br, zstd
             [HTTP_ACCEPT_LANGUAGE] => pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
             [HTTP_COOKIE] => PHPSESSID=spv23vphp7815cchjmlpggsope
@@ -68,17 +62,17 @@ Array
             [CONTEXT_PREFIX] => 
             [CONTEXT_DOCUMENT_ROOT] => C:/xampp/htdocs
             [SERVER_ADMIN] => postmaster@localhost
-            [SCRIPT_FILENAME] => C:/xampp/htdocs/projectGrupoBikemia/src/php/finalizar_pedido.php
-            [REMOTE_PORT] => 58808
+            [SCRIPT_FILENAME] => C:/xampp/htdocs/siteGrupoBikemia/src/php/verificar_sessao.php
+            [REMOTE_PORT] => 59413
             [GATEWAY_INTERFACE] => CGI/1.1
             [SERVER_PROTOCOL] => HTTP/1.1
-            [REQUEST_METHOD] => POST
+            [REQUEST_METHOD] => GET
             [QUERY_STRING] => 
-            [REQUEST_URI] => /projectGrupoBikemia/src/php/finalizar_pedido.php
-            [SCRIPT_NAME] => /projectGrupoBikemia/src/php/finalizar_pedido.php
-            [PHP_SELF] => /projectGrupoBikemia/src/php/finalizar_pedido.php
-            [REQUEST_TIME_FLOAT] => 1748914422.3182
-            [REQUEST_TIME] => 1748914422
+            [REQUEST_URI] => /siteGrupoBikemia/src/php/verificar_sessao.php
+            [SCRIPT_NAME] => /siteGrupoBikemia/src/php/verificar_sessao.php
+            [PHP_SELF] => /siteGrupoBikemia/src/php/verificar_sessao.php
+            [REQUEST_TIME_FLOAT] => 1749004509.6652
+            [REQUEST_TIME] => 1749004509
         )
 
 )
