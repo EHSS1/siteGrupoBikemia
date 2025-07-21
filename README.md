@@ -37,7 +37,7 @@ Transformar um projeto acadêmico em um sistema funcional de apoio à comunidade
 
 ## 📽️ Demonstração
 
-- **Vídeo**: [YouTube](https://youtu.be/Bw- **Código-fonte**: https://github.com/EHSS1/siteGrupoBikemia
+- **Vídeo**: [YouTube](https://www.youtube.com/watch?v=BwCJj57RgWI) **Código-fonte**: https://github.com/EHSS1/siteGrupoBikemia
 - **Script do banco de dados**: `src/banco/script.sql`
 
 ---
