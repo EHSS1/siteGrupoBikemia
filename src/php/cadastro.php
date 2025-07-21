@@ -4,19 +4,15 @@ require_once 'conexao.php';
 
 try {
     // Obter e sanitizar dados de entrada
-    $nome = trim($_POST['nome'] ?? '');
-    $apelido = trim($_POST['apelido'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $telefone = trim($_POST['telefone'] ?? '');
+    $nome = htmlspecialchars(trim($_POST['nome'] ?? ''));
+    $apelido = htmlspecialchars(trim($_POST['apelido'] ?? ''));
+    $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
+    $telefone = preg_replace('/\D/', '', $_POST['telefone'] ?? '');
     $senha = $_POST['senha'] ?? '';
 
     // Validações
     if (!$nome || !$apelido || !$email || !$senha) {
         throw new Exception('Todos os campos obrigatórios devem ser preenchidos');
-    }
-
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        throw new Exception('E-mail inválido');
     }
 
     if (strlen($senha) < 8) {
@@ -32,7 +28,7 @@ try {
 
     // Criar hash da senha
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
-    
+
     // Inserir novo usuário
     $stmt = $conn->prepare("INSERT INTO usuarios (nome, apelido, email, telefone, senha) VALUES (?, ?, ?, ?, ?)");
     $stmt->execute([$nome, $apelido, $email, $telefone, $senhaHash]);

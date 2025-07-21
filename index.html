@@ -160,15 +160,7 @@
   </form>
   <p>&copy; <span id="currentYear"></span> Grupo Bikemia. Todos os direitos reservados.</p>
 </div>
-
-<script>
-document.getElementById('contatoFooterForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  document.getElementById('contatoFooterMsg').textContent = "Mensagem enviada! Obrigado pelo contato.";
-  this.reset();
-});
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-</script>
+  </footer>
 <script src="src/js/script.js" type="module" defer></script>
 </body>
 </html>

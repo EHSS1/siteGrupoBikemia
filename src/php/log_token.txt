@@ -5,9 +5,9 @@ Array
             [Host] => localhost
             [Connection] => keep-alive
             [sec-ch-ua-platform] => "Windows"
-            [Authorization] => 93ca6b9363eeba6666413531bffdbbf84ee58b9291cce7dfc94ba0bc54c4a0b4
-            [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
-            [sec-ch-ua] => "Chromium";v="136", "Google Chrome";v="136", "Not.A/Brand";v="99"
+            [Authorization] => 5cc4ab0205dd2659d356e1aa2940d4d77eda0f4710f69cf2e208d4b7b521c65b
+            [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+            [sec-ch-ua] => "Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"
             [sec-ch-ua-mobile] => ?0
             [Accept] => */*
             [Sec-Fetch-Site] => same-origin
@@ -16,14 +16,14 @@ Array
             [Referer] => http://localhost/siteGrupoBikemia/index.html
             [Accept-Encoding] => gzip, deflate, br, zstd
             [Accept-Language] => pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
-            [Cookie] => PHPSESSID=spv23vphp7815cchjmlpggsope
+            [Cookie] => PHPSESSID=3qd0t3fhlim3d6bu9hblm831uc
             [DNT] => 1
         )
 
-    [token] => 93ca6b9363eeba6666413531bffdbbf84ee58b9291cce7dfc94ba0bc54c4a0b4
+    [token] => 5cc4ab0205dd2659d356e1aa2940d4d77eda0f4710f69cf2e208d4b7b521c65b
     [_SERVER] => Array
         (
-            [HTTP_AUTHORIZATION] => 93ca6b9363eeba6666413531bffdbbf84ee58b9291cce7dfc94ba0bc54c4a0b4
+            [HTTP_AUTHORIZATION] => 5cc4ab0205dd2659d356e1aa2940d4d77eda0f4710f69cf2e208d4b7b521c65b
             [MIBDIRS] => C:/xampp/php/extras/mibs
             [MYSQL_HOME] => \xampp\mysql\bin
             [OPENSSL_CONF] => C:/xampp/apache/bin/openssl.cnf
@@ -33,8 +33,8 @@ Array
             [HTTP_HOST] => localhost
             [HTTP_CONNECTION] => keep-alive
             [HTTP_SEC_CH_UA_PLATFORM] => "Windows"
-            [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
-            [HTTP_SEC_CH_UA] => "Chromium";v="136", "Google Chrome";v="136", "Not.A/Brand";v="99"
+            [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+            [HTTP_SEC_CH_UA] => "Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"
             [HTTP_SEC_CH_UA_MOBILE] => ?0
             [HTTP_ACCEPT] => */*
             [HTTP_SEC_FETCH_SITE] => same-origin
@@ -43,9 +43,9 @@ Array
             [HTTP_REFERER] => http://localhost/siteGrupoBikemia/index.html
             [HTTP_ACCEPT_ENCODING] => gzip, deflate, br, zstd
             [HTTP_ACCEPT_LANGUAGE] => pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
-            [HTTP_COOKIE] => PHPSESSID=spv23vphp7815cchjmlpggsope
+            [HTTP_COOKIE] => PHPSESSID=3qd0t3fhlim3d6bu9hblm831uc
             [HTTP_DNT] => 1
-            [PATH] => C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\eduar\scoop\shims;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\eduar\AppData\Local\Microsoft\WindowsApps;C:\Users\eduar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\eduar\AppData\Local\GitHubDesktop\bin;C:\Users\eduar\AppData\Roaming\npm;C:\xampp\php;C:\Program Files\PostgreSQL\17\bin
+            [PATH] => C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\eduar\scoop\shims;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\eduar\AppData\Local\Microsoft\WindowsApps;C:\Users\eduar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\eduar\AppData\Local\GitHubDesktop\bin;C:\Users\eduar\AppData\Roaming\npm;C:\xampp\php;C:\Program Files\PostgreSQL\17\bin
             [SystemRoot] => C:\Windows
             [COMSPEC] => C:\Windows\system32\cmd.exe
             [PATHEXT] => .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
@@ -63,7 +63,7 @@ Array
             [CONTEXT_DOCUMENT_ROOT] => C:/xampp/htdocs
             [SERVER_ADMIN] => postmaster@localhost
             [SCRIPT_FILENAME] => C:/xampp/htdocs/siteGrupoBikemia/src/php/verificar_sessao.php
-            [REMOTE_PORT] => 59413
+            [REMOTE_PORT] => 60240
             [GATEWAY_INTERFACE] => CGI/1.1
             [SERVER_PROTOCOL] => HTTP/1.1
             [REQUEST_METHOD] => GET
@@ -71,8 +71,8 @@ Array
             [REQUEST_URI] => /siteGrupoBikemia/src/php/verificar_sessao.php
             [SCRIPT_NAME] => /siteGrupoBikemia/src/php/verificar_sessao.php
             [PHP_SELF] => /siteGrupoBikemia/src/php/verificar_sessao.php
-            [REQUEST_TIME_FLOAT] => 1749004509.6652
-            [REQUEST_TIME] => 1749004509
+            [REQUEST_TIME_FLOAT] => 1750299081.7166
+            [REQUEST_TIME] => 1750299081
         )
 
 )
