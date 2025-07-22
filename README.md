@@ -1,4 +1,4 @@
-# 🚴‍♂️ Site Grupo Bikemia
+# 🚴‍♂️ Bikemia
 
 Plataforma desenvolvida para a comunidade de ciclistas **Grupo Bikemia**, com o objetivo de promover integração entre membros e arrecadar fundos por meio de um e-commerce de produtos personalizados.
 
